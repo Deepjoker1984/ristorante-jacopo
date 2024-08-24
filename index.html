@@ -1,61 +1,177 @@
 <!DOCTYPE html>
-   <html lang="it">
-   <head>
-       <meta charset="UTF-8">
-       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-       <title>Ristorante dell'Amico</title>
-       <link rel="stylesheet" href="css/style.css">
-   </head>
-   <body>
-       <header>
-           <h1>Ristorante dell'Amico</h1>
-           <nav>
-               <ul>
-                   <li><a href="#home">Home</a></li>
-                   <li><a href="#menu">Menu</a></li>
-                   <li><a href="#piatti">I Nostri Piatti</a></li>
-                   <li><a href="#contatti">Contatti</a></li>
-               </ul>
-           </nav>
-       </header>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ristorante Jacopo - Piatti Express Salutari</title>
+    <style>
+        :root {
+            --color-blue: #3498db;
+            --color-green: #2ecc71;
+            --color-orange: #e67e22;
+            --color-text: #333;
+            --color-background: #f4f4f4;
+        }
 
-       <main>
-           <section id="home">
-               <h2>Benvenuti al Ristorante dell'Amico</h2>
-               <p>Descrizione del ristorante...</p>
-           </section>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-           <section id="menu">
-               <h2>Il Nostro Menu</h2>
-               <p>Inserisci qui il tuo menu...</p>
-           </section>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--color-text);
+            background-color: var(--color-background);
+        }
 
-           <section id="piatti">
-               <h2>I Nostri Piatti</h2>
-               <div class="gallery">
-                   <figure>
-                       <img src="immagini/piatto1.jpg" alt="Piatto 1">
-                       <figcaption>Nome del Piatto 1</figcaption>
-                   </figure>
-                   <figure>
-                       <img src="immagini/piatto2.jpg" alt="Piatto 2">
-                       <figcaption>Nome del Piatto 2</figcaption>
-                   </figure>
-                   <figure>
-                       <img src="immagini/piatto3.jpg" alt="Piatto 3">
-                       <figcaption>Nome del Piatto 3</figcaption>
-                   </figure>
-               </div>
-           </section>
+        header {
+            background-color: var(--color-blue);
+            padding: 1rem;
+        }
 
-           <section id="contatti">
-               <h2>Contatti</h2>
-               <p>Informazioni di contatto...</p>
-           </section>
-       </main>
+        nav ul {
+            list-style-type: none;
+            display: flex;
+            justify-content: space-around;
+        }
 
-       <footer>
-           <p>&copy; 2024 Ristorante dell'Amico. Tutti i diritti riservati.</p>
-       </footer>
-   </body>
-   </html>
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        nav ul li a:hover {
+            background-color: var(--color-green);
+        }
+
+        main {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        section {
+            margin-bottom: 3rem;
+        }
+
+        h1, h2 {
+            color: var(--color-blue);
+            margin-bottom: 1rem;
+        }
+
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+
+        .gallery figure {
+            margin: 1rem;
+            text-align: center;
+            width: calc(33.333% - 2rem);
+        }
+
+        .gallery img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        #calcola {
+            background-color: var(--color-green);
+            padding: 2rem;
+            border-radius: 8px;
+            color: white;
+        }
+
+        footer {
+            background-color: var(--color-orange);
+            color: white;
+            text-align: center;
+            padding: 1rem;
+            margin-top: 2rem;
+        }
+
+        @media (max-width: 768px) {
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            nav ul li {
+                margin-bottom: 0.5rem;
+            }
+
+            .gallery figure {
+                width: calc(50% - 2rem);
+            }
+        }
+
+        @media (max-width: 480px) {
+            .gallery figure {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#menu">Menu</a></li>
+                <li><a href="#piatti">I Nostri Piatti</a></li>
+                <li><a href="#calcola">Calcola il tuo fabbisogno</a></li>
+                <li><a href="#contatti">Contatti</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home">
+            <h1>Ristorante Jacopo</h1>
+            <p>Benvenuto nel nostro ristorante di ottimi piatti express preparati con cura e amore in base al tuo fabbisogno giornaliero. Usa la nostra app per calcolare e poi scegliere i piatti migliori in base alle tue esigenze.</p>
+        </section>
+
+        <section id="menu">
+            <h2>Il Nostro Menu</h2>
+            <p>Scopri la nostra selezione di piatti salutari e deliziosi.</p>
+            <!-- Qui puoi aggiungere il menu dettagliato in futuro -->
+        </section>
+
+        <section id="piatti">
+    <h2>I Nostri Piatti</h2>
+    <div class="gallery">
+        <figure>
+            <img src="immagini/piatto1.jpg" alt="Piatto 1">
+            <figcaption>Nome del Piatto 1</figcaption>
+        </figure>
+        <figure>
+            <img src="immagini/piatto2.jpg" alt="Piatto 2">
+            <figcaption>Nome del Piatto 2</figcaption>
+        </figure>
+    </div>
+</section>
+
+        <section id="calcola">
+            <h2>Calcola il tuo fabbisogno</h2>
+            <p>Prossimamente: Un'app per calcolare il tuo fabbisogno calorico giornaliero e suggerire i piatti più adatti a te.</p>
+        </section>
+
+        <section id="contatti">
+            <h2>Contatti</h2>
+            <p>Informazioni di contatto del ristorante...</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Ristorante Jacopo. Tutti i diritti riservati.</p>
+    </footer>
+</body>
+</html>
