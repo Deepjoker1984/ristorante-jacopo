@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ristorante Jacopo - Piatti Express Salutari</title>
-    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
     <style>
         :root {
             --color-primary: #34495e;
@@ -21,16 +20,16 @@
         }
 
         body {
-            font-family: 'Lato', sans-serif;
+            font-family: Arial, sans-serif;
             line-height: 1.6;
             color: var(--color-text);
             background-color: var(--color-background);
         }
 
         .container {
-            max-width: 1200px;
+            max-width: 1000px;
             margin: 0 auto;
-            padding: 0 20px;
+            padding: 0 15px;
         }
 
         header {
@@ -48,14 +47,14 @@
         }
 
         nav ul li {
-            margin: 0 15px;
+            margin: 0 10px;
         }
 
         nav ul li a {
             color: white;
             text-decoration: none;
-            font-weight: 700;
-            font-size: 1.1rem;
+            font-weight: bold;
+            font-size: 1rem;
             transition: color 0.3s;
         }
 
@@ -63,44 +62,33 @@
             color: var(--color-secondary);
         }
 
-        h1, h2, h3 {
-            font-family: 'Playfair Display', serif;
+        h1, h2 {
+            color: var(--color-primary);
             margin-bottom: 1rem;
         }
 
-        h1 {
-            font-size: 2.5rem;
-            color: var(--color-primary);
-        }
-
-        h2 {
-            font-size: 2rem;
-            color: var(--color-secondary);
-        }
+        h1 { font-size: 2.2rem; }
+        h2 { font-size: 1.8rem; }
 
         section {
-            padding: 4rem 0;
+            padding: 2rem 0;
         }
 
         #home {
-            background: url('/immagini/sfondo-ristorante.jpg') no-repeat center center/cover;
-            height: 100vh;
-            display: flex;
-            align-items: center;
-            text-align: center;
+            background-color: var(--color-secondary);
             color: white;
+            text-align: center;
+            padding: 3rem 0;
         }
 
-        #home .content {
-            background: rgba(0, 0, 0, 0.7);
-            padding: 2rem;
-            border-radius: 15px;
+        #home h1, #home p {
+            color: white;
         }
 
         .gallery {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
         }
 
         .gallery figure {
@@ -109,33 +97,24 @@
 
         .gallery img {
             width: 100%;
-            height: 250px;
+            height: 180px;
             object-fit: cover;
-            border-radius: 15px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s;
-        }
-
-        .gallery img:hover {
-            transform: scale(1.05);
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         }
 
         #calcola {
-            background-color: var(--color-secondary);
+            background-color: var(--color-accent);
             color: white;
             text-align: center;
-            padding: 4rem 0;
-        }
-
-        #calcola h2 {
-            color: white;
+            padding: 2rem 0;
         }
 
         footer {
             background-color: var(--color-primary);
             color: white;
             text-align: center;
-            padding: 2rem 0;
+            padding: 1rem 0;
             margin-top: 2rem;
         }
 
@@ -146,16 +125,11 @@
             }
 
             nav ul li {
-                margin: 10px 0;
+                margin: 5px 0;
             }
 
-            h1 {
-                font-size: 2rem;
-            }
-
-            h2 {
-                font-size: 1.5rem;
-            }
+            h1 { font-size: 2rem; }
+            h2 { font-size: 1.6rem; }
         }
     </style>
 </head>
@@ -175,28 +149,26 @@
     <main>
         <section id="home">
             <div class="container">
-                <div class="content">
-                    <h1>Ristorante Jacopo</h1>
-                    <p>Benvenuto nel nostro ristorante di piatti express preparati con cura e amore, personalizzati per il tuo fabbisogno giornaliero.</p>
-                </div>
+                <h1>Ristorante Jacopo</h1>
+                <p>Piatti express salutari, preparati con cura per il tuo benessere</p>
             </div>
         </section>
 
         <section id="menu" class="container">
             <h2>Il Nostro Menu</h2>
-            <p>Scopri la nostra selezione di piatti salutari e deliziosi, preparati con ingredienti freschi e di alta qualità.</p>
-            <!-- Qui puoi aggiungere il menu dettagliato in futuro -->
+            <p>Scopri la nostra selezione di piatti salutari e deliziosi, preparati con ingredienti freschi di stagione.</p>
+            <!-- Menu dettagliato da aggiungere in futuro -->
         </section>
 
         <section id="piatti" class="container">
             <h2>I Nostri Piatti</h2>
             <div class="gallery">
                 <figure>
-                    <img src="/immagini/piatto1.jpg" alt="Piatto 1">
+                    <img src="immagini/piatto1.jpg" alt="Insalata Primavera">
                     <figcaption>Insalata Primavera</figcaption>
                 </figure>
                 <figure>
-                    <img src="/immagini/piatto2.jpg" alt="Piatto 2">
+                    <img src="immagini/piatto2.jpg" alt="Pasta Integrale al Pesto">
                     <figcaption>Pasta Integrale al Pesto</figcaption>
                 </figure>
             </div>
@@ -205,15 +177,14 @@
         <section id="calcola">
             <div class="container">
                 <h2>Calcola il tuo fabbisogno</h2>
-                <p>Prossimamente: Un'app per calcolare il tuo fabbisogno calorico giornaliero e suggerire i piatti più adatti a te.</p>
+                <p>Prossimamente: App per calcolare il tuo fabbisogno calorico e suggerire i piatti più adatti.</p>
             </div>
         </section>
 
         <section id="contatti" class="container">
             <h2>Contatti</h2>
-            <p>Siamo aperti dal lunedì al sabato, dalle 12:00 alle 22:00.</p>
-            <p>Telefono: 123-456-7890</p>
-            <p>Email: info@ristorantejacopo.it</p>
+            <p>Aperti: Lun-Sab, 12:00-22:00</p>
+            <p>Tel: 123-456-7890 | Email: info@ristorantejacopo.it</p>
             <p>Indirizzo: Via Roma 123, 00100 Roma</p>
         </section>
     </main>
